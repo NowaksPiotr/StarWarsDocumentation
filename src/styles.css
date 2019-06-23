@@ -1,0 +1,181 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Nunito&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Orbitron&display=swap');
+
+html{
+    background-image: url('./assets/background-death-star.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+body{
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    color: white;
+    height: 100%;
+    width: 100%;
+}
+/* ------NO CONTENT------------- */
+.no_content{
+    margin: 10% 10% 0 18%;
+    width: 100%;
+}
+.opening_crawl{
+    font-family: 'Orbitron', sans-serif; 
+    font-size: 3em;
+    animation: opening_crawl 6s ease-out 1s;
+    animation-iteration-count: infinite;
+    color: rgb(75, 213, 238);
+    text-align: justify;
+    opacity: 0;
+}
+@keyframes opening_crawl{
+    0% {
+        opacity: 0.3;
+    }
+    20% {
+        opacity: 0.6;
+    }
+    40% {
+        opacity: 0.8;
+    }
+    60%{
+        opacity: 1;
+    }
+    80% {
+        opacity: 0.5;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+/* -----PAGE TITLE COMPONENT ------  */
+.main_title{
+    font-family: 'Orbitron', sans-serif; 
+    display: inline-block;
+    text-transform: capitalize;
+    text-decoration: underline;
+    font-size: 1.8em;
+    font-weight: bold;
+    margin-left: 1em;
+    text-align: left;
+    outline: none;
+}
+
+/* ------RANDOM QUOTES--------- */
+.random_quote{
+    margin: 0 0 0 9em;
+    text-align: center;
+    font-size: 1.5em;
+;
+}
+
+/*-------NAV-BAR--------------- */
+#wrapper_nav-bar{
+    margin: auto;
+    padding: 0;
+    width: 100%;
+    height: 3em;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-around;
+    background-color: rgba(255,255,255,0.5);
+}
+
+.nav-bar_links{
+    font-size: 1.5em;
+    padding: .3em;
+    display: inline-block;
+    margin: 0 1em 0 1em;
+}
+
+a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: black;
+}
+li:hover{
+    background-color: white;
+    transition: .5s;
+}
+
+.wrapper{
+    width: 100%;
+}
+
+/* ----------SIDE-BAR ON EVERY PAGE --------- */
+.navBar{
+    margin: 0;
+}
+.titlesNav{
+    list-style: none;
+    position: fixed;
+    margin: 0;
+    padding: 0;
+}
+.title{
+    width:14em;
+    margin-top: 0;
+    margin-bottom: .5em;
+    padding: 0.3em;
+    text-align: center;
+}
+.title:hover{
+    cursor: pointer;
+    border-bottom: none;
+    background-color: rgba(255,255,255,0.5);
+    color: black;
+}
+.active{
+    background-color: white;
+    color: black;
+}
+
+/* PAGINATION */
+.pagination{
+    position: absolute;
+    bottom: 0.5em;
+    left: 0.5em;
+    width: 13em;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+.pagination_chosen-page{
+    padding: 0.3em;
+    border: 1px solid white;
+}
+.pagination_chosen-page:hover{
+    color: black;
+    background-color: white;
+    transition: 0.4s;
+}
+
+/* -------------CONTENT---------- */
+.content_title{
+    font-family: 'Orbitron', sans-serif;
+    text-decoration: underline;
+    font-size: 2em;
+}
+.content{
+    margin: 1.5em 3.5em 0 15em;
+    padding: .5em;
+    text-align: center;
+}
+.hidden{
+    display: none;
+}
+.films_info{
+    padding-top: 1em;
+}
+
+.general_information{
+    letter-spacing: 3px;
+    text-align: justify;
+    font-size: 1.2em;
+}
+.mUi{
+    letter-spacing: 3px;
+}

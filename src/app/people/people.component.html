@@ -1,0 +1,30 @@
+<div class="wrapper">
+  <!-------------PAGINATION------------------>
+<app-pagination [type]="type"></app-pagination>
+    <!-------^^----PAGINATION---------^^------->
+  <div class="navBar">
+    <ul class="titlesNav">
+      <li class="title"
+       *ngFor="let item of apiService.swapiResponse?.results; let i = index"
+       (click)="handleClick(i)"
+       [class.active]="i == activeTabIndex">
+        {{item.name}}
+      </li>
+    </ul>
+    <!-------------CONTENT---------------------->
+    <div class="content"
+         *ngFor="let item of apiService.swapiResponse?.results; let i = index"
+        [class.hidden]="i !== activeTabIndex">
+        <h2 class="content_title">
+          {{item.name}}
+        </h2>
+        <h3 class="mUi">Most usefull information:</h3>
+        <p class="general_information">Birth year: {{item.birth_year}}</p>
+        <p class="general_information">Gender: {{item.gender}}</p>
+        <p class="general_information">Height: {{item.height}} cm</p>
+        <p class="general_information">Body mass: {{item.mass}} kg</p>
+        <p class="general_information">Skin color: {{item.skin_color}}</p>
+        <p class="general_information">Eyes color: {{item.eye_color}}</p>
+      </div>
+    </div>
+  </div>

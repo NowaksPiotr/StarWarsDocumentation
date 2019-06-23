@@ -1,0 +1,36 @@
+<div *ngIf="apiService.swapiResponse" class="wrapper">
+  <!-------------PAGINATION------------------>
+  <app-pagination [type]="type"></app-pagination>
+  <!-------^^----PAGINATION---------^^------->
+
+  <!-------------SIDE-BAR--------------->
+
+  <div class="navBar">
+    <ul class="titlesNav">
+      <li class="title" 
+          *ngFor="let item of apiService.swapiResponse.results; let i = index" 
+          (click)="handleClick(i)"
+          [class.active]="i == activeTabIndex">
+        {{item.title}}
+      </li>
+    </ul>
+  </div>
+  <!-------^^------SIDE-BAR------^^--------->
+  <!-------------MAIN CONTENT--------------->
+
+  <div class="content" *ngFor="let item of apiService.swapiResponse.results; let i = index"
+    [class.hidden]="i !== activeTabIndex">
+    <h2 class="content_title">
+      {{item.title}}
+    </h2>
+    <h3 class="films_info">
+      Producer(s): {{item.producer}} <br>
+      Director: {{item.director}} <br>
+      Release date: {{item.release_date}}
+    </h3>
+    <p class="general_information">
+      {{item.opening_crawl}}
+    </p>
+  </div>
+  <!--------^^----MAIN CONTENT----^^----------->
+</div>

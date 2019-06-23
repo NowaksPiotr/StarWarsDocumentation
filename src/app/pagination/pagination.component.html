@@ -1,0 +1,5 @@
+<div class="pagination">
+<span *ngFor="let page of apiService.pages">
+    <span routerLink="/{{type}}/{{ page }}" class="pagination_chosen-page">{{page}}</span>
+  </span>
+  </div>
