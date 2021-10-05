@@ -1,3 +1,5 @@
+!!! Unfortunately it will not work due to change in API provider !!! LIVE: https://starwarsapi.nowakspiotr.vercel.app/
+
 # StarWarsApi
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.2.
